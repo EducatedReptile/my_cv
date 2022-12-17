@@ -1,5 +1,6 @@
 import React from 'react';
 import AppHead from './AppHead';
+import {Container} from '@mui/material';
 
 export interface AppLayoutProps {
     headerContent: React.ReactNode;
@@ -9,12 +10,12 @@ export interface AppLayoutProps {
 
 function AppLayout({headerContent, mainContent, footerContent}: AppLayoutProps) {
     return (
-        <div className="container">
+        <Container>
             <AppHead/>
             {headerContent}
             {mainContent}
             {footerContent}
-        </div>
+        </Container>
     );
 }
 
